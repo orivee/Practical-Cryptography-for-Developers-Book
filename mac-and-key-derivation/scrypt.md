@@ -28,14 +28,14 @@ Memory required = 128 * N * r * p bytes
 Here's are a couple examples:
 
 ```text
-128 * 16384 * 8 * 1 = 16 MB  
-128 * 2048 * 8 * 1 = 2 MB
+128 * 16384 * 8 * 1 = 16 MiB  
+128 * 2048 * 8 * 1 = 2 MiB
 ```
 
 **Choosing parameters** depends on how long you want to wait and what level of security \(password cracking resistance\) you want to achieve:
 
-* Sample parameters for **interactive login**: N=16384, r=8, p=1 \(RAM = 2 MB\). For interactive login you most probably do not want to wait more than 0.5 seconds, so the computations should be reasonably fast. If many users are logging in in the same time, a slow Scrypt computation can slow down the entire system.
-* Sample parameters for **file encryption**: N=1048576, r=8, p=1 \(RAM = 1 GB\). When you encrypt your hard drive, you will unlock the encrypted data in rare cases, usually not more than 2-3 times per day, so you may want to wait for 2-3 seconds to increase the security.
+* Sample parameters for **interactive login**: N=16384, r=8, p=1 \(RAM = 16 MiB\). For interactive login you most probably do not want to wait more than 0.5 seconds, so the computations should be reasonably fast. If many users are logging in in the same time, a slow Scrypt computation can slow down the entire system.
+* Sample parameters for **file encryption**: N=1048576, r=8, p=1 \(RAM = 1 GiB\). When you encrypt your hard drive, you will unlock the encrypted data in rare cases, usually not more than 2-3 times per day, so you may want to wait for 2-3 seconds to increase the security.
 
 You can perform tests and choose the Scrypt parameters yourself during the design and development of your app or system. Always try to use the **fastest possible implementation of Scrypt** for your language and platform, because crackers will definitely use it. Some implementations \(e.g. in Python\) may be 100 times slower than the fastest ones!
 
