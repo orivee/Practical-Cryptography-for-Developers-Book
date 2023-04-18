@@ -38,5 +38,5 @@ In the above example the SHA-1 unique ID identifies a certain commit in GitHub.
 
 ## Cryptographic Hashes are Part of Modern Programming
 
-**Cryptographic hash functions** are so widely used, that they are often implemented as **build-in functions** in the standard libraries for the modern programming languages and platforms.
+**Cryptographic hash functions** are so widely used, that they are often implemented as **built-in functions** in the standard libraries for the modern programming languages and platforms.
 
